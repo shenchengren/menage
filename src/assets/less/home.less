@@ -1,0 +1,25 @@
+@charset'utf-8';
+body{
+    position: relative;
+    overflow:hidden;
+}
+@left_width:220px;
+.navSide{
+    position: absolute;
+    top: 64px;
+    left: 0px;
+}
+.locationtag{
+    position:absolute;
+    height: 41px;
+    line-height: 40px;
+    top:64px;
+    left: @left_width;
+}
+.userinquire{
+    position: absolute;
+    top: 105px;
+    left: @left_width;
+    width: calc(100vw - @left_width);
+    padding: 10px;
+}

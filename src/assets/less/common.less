@@ -1,0 +1,17 @@
+.fl{
+     float:left;
+ }
+ .fr{
+    float:right;
+ }
+ .clear{
+     *zoom:1;
+     &:after{
+         content: "";
+         display: block;
+         height: 0;
+         clear: both;
+         visibility: hidden;
+         overflow: hidden;
+     }
+ }
