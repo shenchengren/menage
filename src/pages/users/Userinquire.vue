@@ -24,6 +24,7 @@
 		        </Col>
 		    </Row>
 	        <FormItem>
+                 <Button type="primary" ghost @click='add'><Icon type="ios-add-circle-outline"/>添加</Button>
 	            <Button type="primary"><Icon type="md-search" />查询</Button>
 	            <Button style="margin-left: 8px"><Icon type="ios-refresh" />重置</Button>
 	        </FormItem>
@@ -139,6 +140,12 @@
             },
             remove (index) {
                 this.data.splice(index, 1);
+            },
+            add(){
+                this.$router.push({
+                    			path: '/add'
+                            });
+                         
             }
         }
     }
