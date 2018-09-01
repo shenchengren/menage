@@ -1,5 +1,5 @@
 <style lang="less">
-	@import url("../assets/less/home.less");
+	@import url("./home.less");
 </style>
 
 <template>
@@ -12,10 +12,10 @@
 </template>
 
 <script>
-import topnav from'../components/nav/header.vue'
-import navSide from'../components/nav/navSide.vue'
-import locationtag from'../components/nav/locationtag.vue'
-import userinquire from'../components/components/userinquire.vue'
+import topnav from '../../components/nav/Header.vue'
+import navSide from '../../components/nav_side/NavSide.vue'
+import locationtag from '../../components/tag/Locationtag.vue'
+import userinquire from '../users/Userinquire.vue'
 
 export default {
   name: 'App',

@@ -1,6 +1,6 @@
 <style lang="less">
 	@import url("../../assets/less/common.less");
-	@import url("../../assets/less/header.less");
+	@import url("./header.less");
 </style>
 
 <template>

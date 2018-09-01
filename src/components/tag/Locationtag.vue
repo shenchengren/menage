@@ -1,5 +1,5 @@
 <style lang="less">
-	@import url("../../assets/less/locationtag.less");
+	@import url("./locationtag.less");
 </style>
 
 <template>

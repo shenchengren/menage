@@ -1,5 +1,5 @@
 <style lang="less">
-	@import url("../../assets/less/navSide.less");
+	@import url("./navSide.less");
 </style>
 
 <template>

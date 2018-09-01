@@ -1,10 +1,10 @@
 <style lang="less">
-	@import url("../assets/less/login.less");
+	@import url("./login.less");
 </style>
 
 <template>
 	<Form class="loginDiv" ref="form" :model="form" :rules="ruleform" label-position="top">
-		<img src="../assets/images/bg_custom.png"/>
+		<img src="../../assets/images/bg_custom.png"/>
         <FormItem label="用户名" prop="user">
             <Input type="text" prefix="ios-contact" clearable v-model="form.user"></Input>
         </FormItem>
