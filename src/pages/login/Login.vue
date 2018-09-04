@@ -6,10 +6,10 @@
 	<Form class="loginDiv" ref="form" :model="form" :rules="ruleform" label-position="top">
 		<img src="../../assets/images/bg_custom.png"/>
         <FormItem label="用户名" prop="name">
-            <Input type="text" prefix="ios-contact" clearable v-model="form.name"></Input>
+            <Input type="text" prefix="ios-contact" clearable v-model="form.name" />
         </FormItem>
         <FormItem label="密码" prop="pwd">
-            <Input type="pwd" prefix="ios-lock-outline" clearable v-model="form.pwd"></Input>
+            <Input type="password" prefix="ios-lock-outline" clearable v-model="form.pwd" />
         </FormItem>
         <FormItem prop="rememberme">
             <Checkbox label="记住我" v-model="form.rememberme">记住我</Checkbox>
@@ -54,14 +54,8 @@
 			Login(data){
 				this.$ajax.post('http://39.106.54.6:8081/api/login',data).then(res => {
 					console.log(res.data.msg)
-					// this.$Message.success('Success!');
 				},(err) => {
 					console.log('服务器出错，稍后再试')
-
-
-
-
-
 
 				})
 			}

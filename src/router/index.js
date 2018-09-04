@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Login from '@/pages/login/Login.vue';
 import Home from '@/pages/index/Home.vue';
-import addUser from '@/pages/users/addUser.vue'
+import AddUser from '@/pages/users/AddUser.vue'
 
 Vue.use(Router)
 
@@ -20,8 +20,8 @@ export default new Router({
     },
     {
       path : '/add',
-      name : "addUser",
-      component:addUser,
+      name: "AddUser",
+      component: AddUser,
     },
 
   ]
