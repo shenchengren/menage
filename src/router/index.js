@@ -1,28 +1,41 @@
 import Vue from 'vue'
-import Router from 'vue-router'
-import Login from '@/pages/login/Login.vue';
-import Home from '@/pages/index/Home.vue';
-import AddUser from '@/pages/users/AddUser.vue'
+import VueRouter from 'vue-router'
+import routers from './router'
+import axios from 'axios'
+import state from '@/store/index'
 
-Vue.use(Router)
+Vue.use(VueRouter);
 
-export default new Router({
-  routes: [
-    {
-      path: '/login',
-      name: 'Login',
-      component: Login
-    },
-    {
-      path : '/home',
-      name : "Home",
-      component:Home,
-    },
-    {
-      path : '/add',
-      name: "AddUser",
-      component: AddUser,
-    },
+const RouterConfig = {
+  routes : routers//路由路径
+}
+//创建 router 实例，然后传 `routes` 配置
+export const router =  new VueRouter(RouterConfig);//创建一个实例化的路由
 
-  ]
+//路由守卫 不明觉厉
+router.beforeEach((to,from,next) => {
+  axios.post('http://39.106.54.6:8089/api/sign').then(res => {
+    console.log(res)
+    if(res.status == 0){
+      if(to.name !== 'Login'){
+        next({name : 'Login'})
+      }else{
+        next();
+      }
+    }else{
+      if(to.name === 'Login'){
+        next({name : 'Home'})
+      }else{
+        if(res.limits === 0){
+          state.limits = 0;
+          next()
+        }else{
+          state.limits = 1;
+          next()
+        }
+      }
+    }
+  },(err) => {
+    console.log(err)
+  })
 })

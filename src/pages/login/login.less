@@ -1,20 +1,20 @@
 @charset "utf-8";
-body{
-    position: relative;
-    width: calc(100vw);
-    height: calc(100vh);
-    min-height: 570px;
+
+.main{
+    width: 100%;
+    height: 100%;
     background-size: cover;
+    background-position: center;
+    position: relative;
     background: url(../../assets/images/3.jpg) no-repeat;
 }
 .loginDiv{
-        position: fixed;
+        position: absolute;
         width: 400px;
         height: 450px;
-        top: 50%;
-        left: 50%;
-        margin-left:-200px;
-        margin-top: -225px;
+        top: 20%;
+        right: 50%;
+        margin-right:-200px;
         color: #ffffff;
         padding: 20px;
         border:1px solid #909090;
@@ -26,10 +26,7 @@ body{
             width: 338px;
             height: 100px;
         }
-        FormItem{
-            color:#FFFFFF;
-            margin-bottom: 10px;
-        }
+      
 }
 .ivu-form .ivu-form-item-label{
     width: 60px;

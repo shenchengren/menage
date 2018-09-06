@@ -1,0 +1,38 @@
+@charset "utf-8";
+.main {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  background: url(../../assets/images/3.jpg) no-repeat;
+}
+.loginDiv {
+  position: absolute;
+  width: 400px;
+  height: 450px;
+  top: 20%;
+  right: 50%;
+  margin-right: -200px;
+  color: #ffffff;
+  padding: 20px;
+  border: 1px solid #909090;
+  box-shadow: 10px 5px 70px #0d967a;
+  border-radius: 5px;
+}
+.loginDiv img {
+  display: block;
+  margin: 20px auto;
+  width: 338px;
+  height: 100px;
+}
+.ivu-form .ivu-form-item-label {
+  width: 60px;
+  font-size: 14px;
+  color: #FFFFFF;
+  text-align: justify;
+}
+.ivu-checkbox + span,
+.ivu-checkbox-wrapper + span {
+  color: #FFFFFF;
+}

@@ -3,6 +3,7 @@
 </style>
 
 <template>
+<div class="main">
 	<Form class="loginDiv" ref="form" :model="form" :rules="ruleform" label-position="top">
 		<img src="../../assets/images/bg_custom.png"/>
         <FormItem label="用户名" prop="name">
@@ -18,9 +19,12 @@
             <Button type="success" long @click="handleSubmit('form')">立即登录</Button>
         </FormItem>
     </Form>
+</div>
+	
 </template>
 
 <script>
+	import {setCookie} from '@/utils/index'
 	export default{
 		data(){
 			return{
@@ -52,8 +56,14 @@
 				})
 			},
 			Login(data){
-				this.$ajax.post('http://39.106.54.6:8081/api/login',data).then(res => {
-					console.log(res.data.msg)
+				this.$ajax.post('http://39.106.54.6:8081/api/login',data).then(response => {
+					let res = response.data;
+					if(res.status == 0){
+						this.$Message.error(res.msg)
+					}else{
+						this.$router.push({path : '/home'})
+						setCookie(res.userId,res.userName)
+					}
 				},(err) => {
 					console.log('服务器出错，稍后再试')
 
