@@ -1,0 +1,30 @@
+@charset 'utf-8';
+body {
+  position: relative;
+  overflow: hidden;
+}
+.navSide {
+  position: absolute;
+  top: 64px;
+  left: 0px;
+}
+.locationtag {
+  position: absolute;
+  height: 41px;
+  line-height: 40px;
+  top: 64px;
+  left: 220px;
+}
+.main-con {
+  position: absolute;
+  top: 105px;
+  left: 220px;
+  width: calc(-120vw);
+  padding: 10px;
+}
+.title {
+  font-size: 16px;
+  margin: 10px 0 20px 50px;
+  padding: 10px;
+  border-bottom: 1px dashed #dcdee2;
+}

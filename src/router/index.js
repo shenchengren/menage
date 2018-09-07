@@ -14,11 +14,12 @@ export const router =  new VueRouter(RouterConfig);//创建一个实例化的路
 
 //路由守卫 不明觉厉
 router.beforeEach((to,from,next) => {
-  axios.post('http://39.106.54.6:8089/api/sign').then(res => {
-    console.log(res)
+  axios.post('http://39.106.54.6:8089/api/sign').then(respose => {
+    console.log(respose)
+    let res = respose.data;
     if(res.status == 0){
       if(to.name !== 'Login'){
-        next({name : 'Login'})
+        next({path : '/login'})
       }else{
         next();
       }
@@ -39,3 +40,4 @@ router.beforeEach((to,from,next) => {
     console.log(err)
   })
 })
+

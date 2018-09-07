@@ -1,0 +1,21 @@
+@charset 'utf-8';
+.ivu-layout-header {
+  padding: 0 20px;
+}
+.bg {
+  background-position: left center;
+}
+.bg .left {
+  float: left;
+  margin-left: 200px;
+}
+.bg .right {
+  float: right;
+  margin-right: 70px;
+}
+.bg .logo {
+  float: left;
+  margin-left: 20px;
+  color: #fa6868;
+  font-size: 24px;
+}

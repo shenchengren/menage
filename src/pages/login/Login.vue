@@ -56,7 +56,7 @@
 				})
 			},
 			Login(data){
-				this.$ajax.post('http://39.106.54.6:8081/api/login',data).then(response => {
+				this.$ajax.post('http://39.106.54.6:8089/api/login',data).then(response => {
 					let res = response.data;
 					if(res.status == 0){
 						this.$Message.error(res.msg)

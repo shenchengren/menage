@@ -24,14 +24,22 @@
 		        </Col>
 		    </Row>
 	        <FormItem>
-                 <Button type="primary" ghost @click='add'><Icon type="ios-add-circle-outline"/>添加</Button>
+                 <Button type="primary"   @click='add'><Icon type="ios-add-circle-outline"/>添加</Button>
 	            <Button type="primary"><Icon type="md-search" />查询</Button>
 	            <Button style="margin-left: 8px"><Icon type="ios-refresh" />重置</Button>
 	        </FormItem>
 	    </Form>
 	                                  <!--数据表格-->
 	    <Table border stripe :columns="columns" :data="data"></Table>
-	    <Page :total="4" show-elevator show-sizer/>
+        <Row> 
+            <Col span="8" offset="16">
+                <div style="margin-top:30px">
+                    <Page :total="4" show-elevator show-sizer/>
+                </div>
+               
+            </Col>
+        </Row>
+	    
     </div>
 </template>
 <script>
@@ -142,9 +150,7 @@
                 this.data.splice(index, 1);
             },
             add(){
-                this.$router.push({
-                    			path: '/add'
-                            });
+                this.$router.push({path: '/add'});
                          
             }
         }

@@ -9,7 +9,7 @@ export function setCookie(userId,userName){
         time : times
     }
 
-    Cookie.set('user',obj)
+    Cookie.set('user',JSON.stringify(obj))
 }
 
 export function getCookie(user){

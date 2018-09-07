@@ -7,7 +7,11 @@
 		<Header class="Header"></Header>
 	    <navSide class="navSide"></navSide>
 	    <locationtag class="locationtag"></locationtag>
-	    <userinquire class="userinquire"></userinquire>
+	    <!-- <userinquire class="userinquire"></userinquire> -->
+		<div class="main-con">
+			<router-view></router-view>
+		</div>
+		
 	</div>
 </template>
 
